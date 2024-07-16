@@ -9,14 +9,15 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class JenkinsPracticeApplication {
 
-	static Logger loggerl = LoggerFactory.getLogger(JenkinsPracticeApplication.class);
+	static Logger logger = LoggerFactory.getLogger(JenkinsPracticeApplication.class);
 	
 	@PostConstruct
 	public void init() {
-		loggerl.info("Application started....");
+		logger.warn("initial call");
+		logger.info("Application started....");
 	}
 	public static void main(String[] args) {
-		loggerl.info("Application executed....");
+		logger.info("Application executed....");
 		SpringApplication.run(JenkinsPracticeApplication.class, args);
 	}
 
